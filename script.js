@@ -7,7 +7,7 @@ request.onload=function()
 {
     var data = request.response;
     var result = JSON.parse(data);
-    var res = result.filter((ele)=>ele.region==="Asia");
+    var res = result.filter((ele)=>ele.region==="Asia" || ele.continents[0]==="Asia");
     console.log("Asian countries:\n\n");
     res.forEach((ele)=>console.log(ele.name.common));
 }
